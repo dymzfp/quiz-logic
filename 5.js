@@ -2,7 +2,6 @@ function fufufu(str) {
   
   var string = str
   var arr = ['pro', 'gram', 'merit', 'program', 'programmer', 'it' ]
-  //var arr2 = ['pro', 'gram', 'merit', 'program', 'it', 'programmer']
   var ulang = 1
   var has
   var buang = []
@@ -79,4 +78,6 @@ function fufufu(str) {
 }
 
 
-fufufu('programit')
+fufufu('programmerit')
+
+
