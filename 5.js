@@ -1,10 +1,10 @@
 function potongYa(str) {
   
   var string = str
-  var arr = ['pro', 'gram', 'merit', 'program', 'merit', 'it', 'programmer']
+  var arr = ['pro', 'gram', 'merit', 'program', 'it', 'programmer']
   var ulang = 1
   var has
-  var buang = []
+  var benar = []
   var buang_hasil = []
   var t = 0
   var cek = ''
@@ -14,10 +14,9 @@ function potongYa(str) {
   for(var x = 0; x < arr.length; x++) {
     has = string.indexOf(arr[x])
     if(has >= 0) {
-      buang.push(arr[x])
+      benar.push(arr[x])
     }
   }
-  
   
   for(var i = 0; i < ulang; i++) {
      for(var x = 0; x < arr.length; x++) {
@@ -36,10 +35,9 @@ function potongYa(str) {
        }
        
      }
+     cek = ''
     
-    cek = ''
-    
-    if(t < buang.length) {
+    if(t <= benar.length) {
        ulang += 1
       
     }
