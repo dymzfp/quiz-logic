@@ -1,11 +1,10 @@
-function fufufu(str) {
+function potongYa(str) {
   
   var string = str
-  var arr = ['pro', 'gram', 'merit', 'program', 'programmer', 'it' ]
+  var arr = ['pro', 'gram', 'merit', 'program', 'merit', 'it', 'programmer']
   var ulang = 1
   var has
   var buang = []
-  var buang2 = []
   var buang_hasil = []
   var t = 0
   var cek = ''
@@ -21,42 +20,25 @@ function fufufu(str) {
   
   
   for(var i = 0; i < ulang; i++) {
-      
-    //console.log(arr)
      for(var x = 0; x < arr.length; x++) {
-       
-       //if(buang_hasil.length > 0) {
-       //  cek += buang_hasil[buang_hasil.length - 1]
-       //}
-       //console.log(cek+arr[x])
+
        has = string.indexOf(cek+arr[x])
-       //console.log(arr[x])
        if(has >= 0) {
          
-         //var valid = buang_hasil[buang_hasil.length-1] + arr[x]
-         //if(string.indexOf(valid) >= 0) {
-           
-           //console.log(arr[x])
            buang_hasil.push(arr[x])
            cek += arr[x]
-           //string = string.substring(arr[x].length, string.length)
          
            arr.splice(x, 1)
          
            x -= 1
            t += 1
-           
-         //}
-         
          
        }
        
-
-       //cek = ''
      }
-     cek = ''
     
-    //console.log(buang2)
+    cek = ''
+    
     if(t < buang.length) {
        ulang += 1
       
@@ -64,20 +46,22 @@ function fufufu(str) {
     
     var arr2 = [ ...arr, ...buang_hasil]
     arr = arr2
+
     
-    //console.log(arr2)
-   
+    var b = ''
+    for(var h = 0; h < buang_hasil.length; h++) {
+      b += buang_hasil[h]
+    }
     
-    console.log(buang_hasil)
+    if(b == str) {
+        console.log(buang_hasil)
+    }
+    
     string = str
     buang_hasil = []
-    //buang2 = buang
     
   }
     
 }
 
-
-fufufu('programmerit')
-
-
+potongYa('programmerit')
