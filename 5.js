@@ -19,6 +19,7 @@ function potongYa(str) {
   }
   
   for(var i = 0; i < ulang; i++) {
+    
      for(var x = 0; x < arr.length; x++) {
 
        has = string.indexOf(cek+arr[x])
@@ -37,11 +38,6 @@ function potongYa(str) {
      }
      cek = ''
     
-    if(t <= benar.length) {
-       ulang += 1
-      
-    }
-    
     var arr2 = [ ...arr, ...buang_hasil]
     arr = arr2
 
@@ -50,16 +46,30 @@ function potongYa(str) {
     for(var h = 0; h < buang_hasil.length; h++) {
       b += buang_hasil[h]
     }
+
+    if(t < benar.length) {
+         ulang += 1
+        }
     
     if(b == str) {
         console.log(buang_hasil)
+        
+        
+    }
+    else {
+      
+         ulang += 1
+      
     }
     
+    
     string = str
+    
+    benar2 = buang_hasil
     buang_hasil = []
     
   }
     
 }
 
-potongYa('programmerit')
+potongYa('proit')
