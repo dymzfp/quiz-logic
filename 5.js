@@ -71,5 +71,3 @@ function potongYa(str) {
   }
     
 }
-
-potongYa('proit')
